@@ -25,22 +25,23 @@
 
 
 # 操作說明
-1. 下載本專案，執行。
-2. 開啟 redis-server，port 設為 6379。
-3. 修改 fang-blog-backend/src/main/java/com/ivanfang/fangblog/utils/AwsS3Util.java 檔案，將 aws s3 bucket 的名稱、地區、密鑰修改為自己的。<br/>
+1. 下載本專案
+2. 開啟 mysql，執行 fang-blog-sql.sql。
+3. 開啟 redis-server，port 設為 6379。
+4. 修改 fang-blog-backend/src/main/java/com/ivanfang/fangblog/utils/AwsS3Util.java 檔案，將 aws s3 bucket 的名稱、地區、密鑰修改為自己的。<br/>
    <img src="https://github.com/Ivan-Fang/Fang-Blog/assets/40261483/c1a76854-5554-402f-94b1-706a06737c2b" width="500" height="250" title="因為資安問題，這邊就請你放自己的吧~">
-4. 啟動後端
+5. 啟動後端
    ```
    cd ./fang-blog-backend
    mvn spring-boot:run
    ```
-5. 啟動前端。
+6. 啟動前端。
    ```
    cd ./fang-blog-frontend
    npm install
    npm run dev
    ```
-6. 開啟以下網址。
+7. 開啟以下網址。
    ```
    http://localhost:5173/login
    ```
