@@ -26,21 +26,22 @@
 
 # How to use?
 1. Download this project.
-2. Open redis-server, and set the port as 6379。
-3. Modify BUCKET, REGION, ACCESS_KEY_ID, and SECRET_ACCESS_KEY in fang-blog-backend/src/main/java/com/ivanfang/fangblog/utils/AwsS3Util.java.<br/>
+2. Open mysql and execute ./fang-blog-sql.sql.
+3. Open redis-server, and set the port as 6379。
+4. Modify BUCKET, REGION, ACCESS_KEY_ID, and SECRET_ACCESS_KEY in fang-blog-backend/src/main/java/com/ivanfang/fangblog/utils/AwsS3Util.java.<br/>
    <img src="https://github.com/Ivan-Fang/Fang-Blog/assets/40261483/c1a76854-5554-402f-94b1-706a06737c2b" width="500" height="250" title="Due to information security issues, I don't give mine here. Please use your own.">
-4. Launch backend.
+5. Launch backend.
    ```
    cd ./fang-blog-backend
    mvn spring-boot:run
    ```
-5. Launch frontend.
+6. Launch frontend.
    ```
    cd ./fang-blog-frontend
    npm install
    npm run dev
    ```
-6. Open the following url.
+7. Open the following url.
    ```
    http://localhost:5173/login
    ```
