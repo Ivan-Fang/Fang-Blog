@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ivanfang.fangblog.mapper.ArticleMapper">
+
+    <!-- List<Article> list(Integer userId, Integer categoryId, String state) -->
+    <select id="list" resultType="Article">
+        select * from article
+        <where>
+            create_user = #{userId}
+            <if test="categoryId != null">
+                and category_id = #{categoryId}
+            </if>
+            <if test="state != null and state != ''">
+                and state = #{state}
+            </if>
+        </where>
+    </select>
+
+    <!-- void update(Article article); -->
+    <update id="update">
+        update article
+        set update_time = now()
+        <if test="article.title != null and article.title != ''">
+            , title = #{article.title}
+        </if>
+        <if test="article.content != null and article.content != ''">
+            , content = #{article.content}
+        </if>
+        <if test="article.coverImg != null and article.coverImg != ''">
+            , cover_img = #{article.coverImg}
+        </if>
+        <if test="article.state != null and article.state != ''">
+            , state = #{article.state}
+        </if>
+        <if test="article.categoryId != null">
+            , category_id = #{article.categoryId}
+        </if>
+        where id = #{article.id} and create_user = #{article.createUser}
+    </update>
+
+</mapper>

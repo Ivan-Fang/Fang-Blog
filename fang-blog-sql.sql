@@ -1,6 +1,6 @@
-create database `fang_times`;
+create database `fang_blog`;
 
-use `fang_times`;
+use `fang_blog`;
 
 -- user info
 create table `user` (

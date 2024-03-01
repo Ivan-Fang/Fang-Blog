@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/fang_times?characterEncoding=utf-8&serverTimezone=Asia/Taipei
+    url: jdbc:mysql://localhost:3306/fang_blog?characterEncoding=utf-8&serverTimezone=Asia/Taipei
     username: root
     password: 123456
   data:
@@ -14,8 +14,8 @@ spring:
       max-request-size: 10MB
 
 mybatis:
-  type-aliases-package: com.ivanfang.fangtimes.pojo
-  mapper-locations: com/ivanfang/fangtimes/mapper/*.xml
+  type-aliases-package: com.ivanfang.fangblog.pojo
+  mapper-locations: com/ivanfang/fangblog/mapper/*.xml
   configuration:
     lazy-loading-enabled: true
     aggressive-lazy-loading: false
