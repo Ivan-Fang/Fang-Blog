@@ -27,7 +27,7 @@
 # 操作說明
 1. 下載本專案，執行。
 2. 開啟 redis-server，port 設為 6379。
-3. 修改 aws s3 bucket 的名稱、地區、密鑰為自己的。<br/>
+3. 修改 fang-blog-backend/src/main/java/com/ivanfang/fangblog/utils/AwsS3Util.java 檔案，將 aws s3 bucket 的名稱、地區、密鑰修改為自己的。<br/>
    <img src="https://github.com/Ivan-Fang/Fang-Blog/assets/40261483/c1a76854-5554-402f-94b1-706a06737c2b" width="500" height="250" title="因為資安問題，這邊就請你放自己的吧~">
 4. 啟動後端
    ```
