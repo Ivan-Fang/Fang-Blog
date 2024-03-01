@@ -24,7 +24,7 @@
 <img src="https://github.com/Ivan-Fang/Fang-Blog/assets/40261483/df3a42c4-ecce-4da3-9c64-7d29db8d4bf7" width="500" height="250" title="User infomation modification">
 
 
-# 操作說明
+# How to use?
 1. Download this project.
 2. Open redis-server, and set the port as 6379。
 3. Modify BUCKET, REGION, ACCESS_KEY_ID, and SECRET_ACCESS_KEY in fang-blog-backend/src/main/java/com/ivanfang/fangblog/utils/AwsS3Util.java.<br/>
