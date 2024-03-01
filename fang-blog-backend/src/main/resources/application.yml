@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fang_times?characterEncoding=utf-8&serverTimezone=Asia/Taipei
+    username: root
+    password: 123456
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+mybatis:
+  type-aliases-package: com.ivanfang.fangtimes.pojo
+  mapper-locations: com/ivanfang/fangtimes/mapper/*.xml
+  configuration:
+    lazy-loading-enabled: true
+    aggressive-lazy-loading: false
+    map-underscore-to-camel-case: true

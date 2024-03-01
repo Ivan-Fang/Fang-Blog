@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ivanfang.fangtimes.mapper.UserMapper">
+
+    <!-- void add(@Param("username") String username, @Param("password") String password) -->
+    <insert id="add">
+        insert into user(username, password, create_time, update_time)
+        values (#{username}, #{password}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)  <!-- CURRENT_TIMESTAMP or now() -->
+    </insert>
+
+    <!-- void update(@Param("user") User user) -->
+    <update id="update">
+        update user
+        set nickname = #{user.nickname}, email = #{user.email}, update_time = CURRENT_TIMESTAMP
+        where id = #{user.id}
+    </update>
+
+</mapper>
